@@ -1,5 +1,8 @@
 export type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 export interface JSONObject {
+    [key: string]: any;
+}
+export interface HTMLObject {
     [key: string]: { type: string; description: string; };
 }
 
@@ -20,13 +23,13 @@ export type IRoute = Node & {
     method: Method;
     guarded: boolean;
     description: string;
-    headers?: JSONObject;
-    body?: JSONObject;
+    headers?: HTMLObject;
+    body?: HTMLObject;
     responses: Response[];
 }
 
 export interface Response {
     code: number;
-    message: string;
+    message: string | ;
     description: string;
 }

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { JSONObject } from "../../types/routes";
+    import type { HTMLObject } from "../../types/routes";
   import Code from "../Code.svelte";
 
-    export let object: JSONObject | undefined;
+    export let object: HTMLObject | undefined;
     export let label: string;
 </script>
 
