@@ -1,0 +1,3 @@
+# minehut-api
+
+readme soon™

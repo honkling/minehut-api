@@ -1,0 +1,32 @@
+{
+    "type": "FOLDER",
+    "name": "",
+    "children": [
+        {
+            "type": "FOLDER",
+            "name": "Server",
+            "children": [
+                {
+                    "type": "ROUTE",
+                    "route": "/server/{name}?byName=true",
+                    "name": "Get Server (name)",
+                    "method": "GET",
+                    "guarded": false,
+                    "description": "Fetches a Minehut server with the given name.",
+                    "responses": [
+                        {
+                            "code": 200,
+                            "message": "{ _id: \"5d2648ee33616a152ae94c42\", owner: \"5d2648d633616a152ae94c36\", name: \"mhtut\", ... }",
+                            "description": "The information of the server requested."
+                        },
+                        {
+                            "code": 500,
+                            "message": "{ ok: false, msg: \"An unknown error occured\" }",
+                            "description": "Indicates that the request failed (typically from the server not existing.)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
